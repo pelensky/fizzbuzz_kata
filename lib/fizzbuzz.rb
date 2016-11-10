@@ -1,20 +1,20 @@
 def divisible_by_3?(number)
-  number % 3 == 0
+  divisible_by?(number, 3)
 end
 
 def divisible_by_5?(number)
-  number % 5 == 0
+  divisible_by?(number, 5)
 end
 
 def divisible_by_3_and_5?(number)
-  number % 15 == 0
+  divisible_by?(number, 15)
 end
 
 def divisible_by?(number, divisor)
   number % divisor == 0
 end
 
-def fizzbuzz (number)
+def fizzbuzz(number)
   return 0 if number == 0
   return "fizzbuzz" if divisible_by_3_and_5?(number)
   return "fizz" if divisible_by_3?(number)
